@@ -70,10 +70,9 @@ func GetInfoHandler(w http.ResponseWriter, r *http.Request) {
 	artistBio := artistInfo.Artist.Bio
 	artistImageURL := artistInfo.Artist.ImageLinks[0].URL
 
-	fmt.Printf("Top Track in %s\n", region)
-	fmt.Printf("Track: %s\n", trackName)
-	fmt.Printf("Artist: %s\n", artistName)
-	fmt.Printf("Artist Bio: %v\n", artistBio.Summary)
-	fmt.Printf("Artist Image: %s\n", artistImageURL)
-	fmt.Fprintf(w, "Success")
+	fmt.Fprintf(w, "Top Track in %s\n", region)
+	fmt.Fprintf(w, "Track: %s\n", trackName)
+	fmt.Fprintf(w, "Artist: %s\n", artistName)
+	fmt.Fprintf(w, "Artist Bio: %v\n", artistBio.Summary)
+	fmt.Fprintf(w, "Artist Image: %s\n", artistImageURL)
 }
